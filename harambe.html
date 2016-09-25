@@ -1,0 +1,100 @@
+
+<html>
+	<head>
+		<title>Don't Shoot Harambe</title>
+		<script type="text/javascript">
+			alert("Welcome to Cincinnati zoo");
+			var imgObj = null;
+			var imgObj2 = null;
+			var sndObj = null;
+			var sndObj2 = null;
+			var sndObj3 = null;
+			var imgObj3 = null;
+			var butObj = null;
+			var butObj1 = null;
+	        var gunObj = null;
+	        var gObj = null;
+	        function init(){
+	          document.body.style.backgroundImage = "url(back.png)";
+	          imgObj = document.getElementById("Harambe");
+              imgObj.style.position= 'absolute'; 
+              imgObj.style.left = '250px'; 
+              imgObj.style.visibility = 'visible';
+	     	  sndObj = document.getElementById("song");
+	     	  
+	     	  sndObj3 = document.getElementById("song3");
+	     	  imgObj2 = document.getElementById("Pic2");
+              imgObj2.style.position= 'absolute'; 
+              imgObj2.style.left = '250px'; 
+              imgObj2.style.visibility = 'hidden';
+              imgObj3 = document.getElementById("Pic3");
+              imgObj3.style.position= 'absolute'; 
+              imgObj3.style.top = '200px';
+              imgObj3.style.left = '250px'; 
+              imgObj3.style.visibility = 'hidden';
+              butObj = document.getElementById("button2");
+              butObj.style.visibility = 'hidden';
+              butObj1 = document.getElementById("1");
+              butObj1.style.visibility = 'visible';
+              gunObj = document.getElementById("song4");
+              gObj = document.getElementById("Pic4")
+              gObj.style.position= 'absolute'; 
+              gObj.style.top = '500px'; 
+              gObj.style.left = '700px';
+              gObj.style.visibility = 'hidden';
+
+	        }
+
+	        function showHide(){
+	        	imgObj.style.visibility = 'hidden';
+	        	imgObj2.style.visibility = 'visible';
+	        	butObj.style.visibility = 'visible';
+	        	butObj1.style.visibility = 'hidden';
+	        	gObj.style.visibility = 'visible';
+	        	
+	        
+	  			
+	  		}
+	   		window.onload =init;
+	   		function play(){
+	   		  imgObj3 = document.getElementById("Pic3");
+              imgObj3.style.position= 'absolute'; 
+              imgObj3.style.left = '250px'; 
+              imgObj3.style.visibility = 'visible';
+              imgObj2.style.visibility = 'hidden';
+              butObj.style.visibility = 'hidden';
+              gObj.style.visibility = 'hidden';
+              sndObj.pause();
+              gunObj.play();
+             
+              setTimeout(sad, 500);
+			  }
+	   		function sad(){
+	   			sndObj3.play();
+	   			alert("Rest in peace Harambe");
+	   		}
+
+		</script>
+	</head>
+	<body>
+	
+	 	<div style="height:100%">
+		<form>
+			<img id = "Harambe" src="Harambe.gif" width="800" height="800"/>
+			<img id = "Pic2"  src ="Harambe2.gif" width="800" height="800"/>
+			<img id = "Pic3"   src ="Final.png" width="800" height="800"/>
+			<img id = "Pic4"   src ="gun.gif" width="300" height="300"/>
+
+			<input id = "1" type="button" onClick="showHide();" value="Click to start"/>
+			<input id = "button2" type="button" onClick="play()" value="shoot"/>
+		</form>
+		
+		<audio source id = "song" src="song.wav" type = "audio/wav"  autoplay loop></audio>
+		<audio source id = "song3" src = "death_song.wav" type = "audio/wav" loop>
+		</audio>
+		<audio source id = "song4" src = "gunshot1.wav" type = "audio/wav"></audio>
+</div>
+
+	</body>
+      
+</html>
